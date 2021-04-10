@@ -9,17 +9,17 @@ namespace Domain.Aggregates
         {
         }
 
-        public DataObject(int iD, string description, DateTime date, List<dynamic> data)
+        public DataObject(int iD, string description, DateTime date, decimal value)
         {
             ID = iD;
             Description = description ?? throw new ArgumentNullException(nameof(description));
             Date = date;
-            Data = data ?? throw new ArgumentNullException(nameof(data));
+            Value = value;
         }
 
         public int ID { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public List<dynamic> Data { get; set; }
+        public decimal Value { get; set; }
     }
 }

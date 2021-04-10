@@ -10,10 +10,7 @@ namespace WebApplication
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public Startup(IConfiguration configuration) => Configuration = configuration;
 
         public IConfiguration Configuration { get; }
 
@@ -23,6 +20,8 @@ namespace WebApplication
             services.AddControllers();
             services.AddRepositoriesDI();
             services.AddServicesDI();
+            services.AddSwaggerGen();
+            services.AddCors();
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -36,6 +35,8 @@ namespace WebApplication
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication v1"));
             }
 
             app.UseRouting();
@@ -59,6 +60,8 @@ namespace WebApplication
                     spa.UseVueCli(npmScript: "serve");
                 }
             });
+
+            app.UseHttpsRedirection();
         }
     }
 }
