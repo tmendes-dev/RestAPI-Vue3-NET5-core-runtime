@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using VueCliMiddleware;
+using Web_Project_Net5_VueJS3.AppConfig;
 
-namespace Web_Project_Net5_VueJS3
+namespace WebApplication
 {
     public class Startup
     {
@@ -26,6 +21,9 @@ namespace Web_Project_Net5_VueJS3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddRepositoriesDI();
+            services.AddServicesDI();
+
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp";
@@ -60,7 +58,6 @@ namespace Web_Project_Net5_VueJS3
                 {
                     spa.UseVueCli(npmScript: "serve");
                 }
-
             });
         }
     }

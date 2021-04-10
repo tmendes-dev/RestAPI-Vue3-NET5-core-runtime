@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web-Project-Net5-VueJS3", "Web-Project-Net5-VueJS3\Web-Project-Net5-VueJS3.csproj", "{2163A959-4C98-4353-A158-6611FDBAF164}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "Web-Project-Net5-VueJS3\WebApplication.csproj", "{2163A959-4C98-4353-A158-6611FDBAF164}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{F64FDC4B-982D-4C72-AD0C-344CB814478A}"
 EndProject

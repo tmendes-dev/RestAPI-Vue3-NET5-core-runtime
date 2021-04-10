@@ -1,6 +1,6 @@
 using System;
 
-namespace Web_Project_Net5_VueJS3
+namespace WebApplication
 {
     public class WeatherForecast
     {
