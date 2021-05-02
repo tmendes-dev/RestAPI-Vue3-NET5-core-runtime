@@ -2,5 +2,5 @@
 
 REST API Skeleton
 
-- Custom DDD design (Web, Domain, Application Services, Repositories/DataAccess, Test)
+- Custom DDD design (Api, Domain, Application Services, Repositories/DataAccess, Test)
 
